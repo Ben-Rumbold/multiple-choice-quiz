@@ -10,39 +10,46 @@
   </head>
 
   <body>
-    <div class="scores"><a href="highscores.html">View Highscores</a></div>
-
-    <div class="timer">Time: <span id="time">0</span></div>
-
-    <div class="wrapper">
-      <div id="start-screen" class="start">
-        <h1>Coding Quiz Challenge</h1>
-        <p>
-          Try to answer the following code-related questions within the time
-          limit. Keep in mind that incorrect answers will penalize your
-          score/time by ten seconds!
-        </p>
-        <button id="start">Start Quiz</button>
+    <!-- start container -->
+    <div class="container" id="startContainer">
+      <h1 id="title">Coding Quiz</h1>
+      <h2 id="subtitle">Click on an answer to choose it, but be careful as the clock is ticking! Your score is calculated by correct answer (10 points) plus the amount of time remaining.</h2>
+      <div id="startBtnContainer">
+        <button id="startBtn">Start</button>
+        <button id="scoresBtn"><a href="highscores.html">Scores</a></button>
       </div>
-
-      <div id="questions" class="hide">
-        <h2 id="question-title"></h2>
-        <div id="choices" class="choices"></div>
-      </div>
-
-      <div id="end-screen" class="hide">
-        <h2>All done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>
-          Enter initials: <input type="text" id="initials" max="3" />
-          <button id="submit">Submit</button>
-        </p>
-      </div>
-
-      <div id="feedback" class="feedback hide"></div>
     </div>
 
-    <script src="./assets/js/questions.js"></script>
-    <script src="./assets/js/logic.js"></script>
+    <!-- question container -->
+    <div class="container" id="questionContainer">
+      <h1 id="title">Coding Quiz</h1>
+      <h2 id="question">Click on an answer to choose it, but be careful as the clock is ticking!</h2>
+      <div class="answerBtnContainer">
+        <button class="btn">sdlgwbljewgj;dfkeghwiog</button>
+        <button class="btn">sdlgwbljewgj;dfkeghwiog</button>
+        <button class="btn">sdlgwbljewgj;dfkeghwiog</button>
+        <button class="btn">sdlgwbljewgj;dfkeghwiog</button>
+      </div>
+      <div class="questionsBtnContainer">
+        <button class="questionsBottomBtn" id="nextBtn">Next</button>
+        <button class="questionsBottomBtn" id="timerBtn">Time: 1.00s</button>
+      </div>
+    </div>
+
+    <!-- show scores container -->
+    <div class="container" id="showScoresContainer">
+      <h1 id="title">Coding Quiz</h1>
+      <h2 id="subtitle">You finished. Well done!</h2>
+      <div class="scoreContainer">
+        <p id="showScore">5</p>
+        <input id="inputName" placeholder="Enter your name">
+      </div>
+      <div class="questionsBtnContainer">
+        <button class="questionsBottomBtn" id="nextBtn">Play Again HTML</button>
+        <button class="questionsBottomBtn" id="submitBtn">Submit</button>
+      </div>
+    </div>
+
+    <script src="./assets/js/questions.js""></script>
   </body>
 </html>

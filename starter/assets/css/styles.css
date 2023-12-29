@@ -1,88 +1,175 @@
-body {
-  font-family: Arial;
-  font-size: 120%;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-a {
-  color: #563d7c;
-  text-decoration: none;
-  transition: color 0.1s;
+* {
+  margin: 0;
+  padding: 0;
 }
 
-a:hover {
-  color: #8570a5;
-}
-
-button {
-  display: inline-block;
-  margin: 5px;
-  cursor: pointer;
-  font-size: 100%;
-  background-color: #563d7c;
-  border-radius: 5px;
-  padding: 2px 10px;
-  color: white;
-  border: 0;
-  transition: background-color 0.1s;
-}
-
-button:hover {
-  background-color: #8570a5;
-}
-
-.choices button {
-  display: block;
-}
-
-input[type="text"] {
-  font-size: 100%;
-}
-
-ol {
-  padding-left: 0px;
-  max-height: 400px;
-  overflow: auto;
-}
-
-li {
-  padding: 5px;
-  list-style: decimal inside none;
-}
-
-li:nth-child(odd) {
-  background-color: #f3edfc;
-}
-
-.wrapper {
-  margin: 100px auto 0 auto;
+.container {
+  background-color: rgb(250, 250, 250);
+  width: 90%;
   max-width: 600px;
+  margin: 30px auto;
+  padding: 15px 20px;
+  border-radius: 20px;
+  box-shadow: 3px 3px 3px lightgray;
 }
 
-.hide {
+#title {
+  border-bottom: 1px solid gray;
+  padding-bottom: 8px;
+}
+
+#subtitle, #question {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  margin-bottom: 15px;
+}
+
+#startBtnContainer {
+  display: flex;
+  justify-content: space-around;
+}
+
+#startBtn, #scoresBtn {
+  border-bottom: 1px solid gray;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  display: block;
+  margin: 0 auto;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+#startBtn:hover, #scoresBtn:hover {
+  background-color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+/* ---------------- all questions styling and question one ------------------- */
+#questionContainer {
   display: none;
 }
 
-.start {
-  text-align: center;
+.questionsBtnContainer {
+  display: flex;
+  justify-content: space-around;
 }
 
-.scores {
-  position: absolute;
-  top: 10px;
-  left: 10px;
+.answerBtnContainer {
+  display: block;
+  border-bottom: 1px solid gray;
+  padding-bottom: 5px;
 }
 
-.feedback {
-  font-style: italic;
-  font-size: 120%;
-  margin-top: 20px;
-  padding-top: 10px;
-  color: gray;
-  border-top: 2px solid #ccc;
+.btn {
+  border-bottom: 1px solid gray;
+  display: block;
+  margin: 15px 0px;
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 1px lightgray;
+  text-align: start;
 }
 
-.timer {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.btn:hover {
+  background-color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+.questionsBottomBtn {
+  border-bottom: 1px solid gray;
+  display: block;
+  margin: 15px auto 0px auto;
+  padding: 5px 10px;
+  font-size: 1.3rem;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 1px 1px 1px lightgray;
+}
+
+#nextBtn:hover {
+  background-color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+#submitBtn:hover {
+  background-color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+.questionsScoresBtn:hover {
+  background-color: rgb(220, 220, 220);
+  cursor: pointer;
+}
+
+#question {
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+  padding-top: 8px;
+  margin-bottom: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.correct {
+  background-color: #9aeabc;
+}
+
+.incorrect {
+  background-color: #ff9393;
+}
+
+.correct:hover {
+  background-color: #9aeabc;
+  cursor: no-drop;
+}
+
+.incorrect:hover {
+  background-color: #ff9393;
+  cursor: no-drop;
+}
+
+.btn:hover:disabled {
+  cursor: no-drop;
+}
+
+#nextBtn:disabled {
+  cursor: no-drop;
+}
+
+/* -------------- scores section --------------- */
+
+#showScoresContainer {
+  display: none;
+}
+
+.scoreContainer {
+  display: flex;
+  border-bottom: 1px solid gray;
+  padding-bottom: 15px;
+}
+
+input {
+  width: 115px;
+  padding-left: 5px;
+}
+
+p {
+  margin-right: 20px;
+  font-size: 22px;
 }
